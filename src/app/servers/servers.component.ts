@@ -11,8 +11,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./servers.component.css']
 })
 export class ServersComponent implements OnInit {
+  allowButton: boolean = false;
+  statuses: string = "off";
+  bolAux: boolean = false;
 
-  constructor() { }
+  
+  constructor() { 
+    setTimeout(() => {
+      this.allowButton = true;
+    }, 3000);
+
+  }
+
+  onUpdateServer() {
+    this.bolAux = !this.bolAux;
+    if (this.bolAux) this.statuses = "Online!"
+
+    else this.statuses = "Offline!"
+  }
 
   ngOnInit(): void {
   }
