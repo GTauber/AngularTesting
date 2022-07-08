@@ -14,6 +14,7 @@ export class ServersComponent implements OnInit {
   allowButton: boolean = false;
   statuses: string = "off";
   bolAux: boolean = false;
+  serverName: string = "";
 
   
   constructor() { 
@@ -28,6 +29,10 @@ export class ServersComponent implements OnInit {
     if (this.bolAux) this.statuses = "Online!"
 
     else this.statuses = "Offline!"
+  }
+
+  onUpdateServerName(e: Event) {
+    this.serverName = (<HTMLInputElement>e.target).value;
   }
 
   ngOnInit(): void {

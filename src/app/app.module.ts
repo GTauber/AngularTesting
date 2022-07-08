@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
 import { LoveYouComponent } from './love-you/love-you.component';
+import { UserAssingmentComponent } from './user-assingment/user-assingment.component';
+import { ComumDirectivesComponent } from './comum-directives/comum-directives.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ServerComponent,
     ServersComponent,
-    LoveYouComponent
+    LoveYouComponent,
+    UserAssingmentComponent,
+    ComumDirectivesComponent
   ],
   imports: [
     BrowserModule,
